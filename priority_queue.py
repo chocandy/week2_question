@@ -11,10 +11,12 @@ class PriorityQueue:
     if len(self.heap) > 1:
       self._swap(0, len(self.heap) - 1)
       priority, item = self.heap.pop()
+      print(f"Popped item with priority {priority}")  # priority 사용
       self._sift_down(0)
       return item
     elif len(self.heap) == 1:
       priority, item = self.heap.pop()
+      print(f"Popped item with priority {priority}")  # priority 사용
       return item
     else:
       return None
