@@ -37,11 +37,11 @@ class PriorityQueue:
       smallest = index
 
       if left_child_index < len(self.heap) and \
-        self.heap[left_child_index][0] < self.heap[smallest][0]:  # < 로 수정
+        self.heap[left_child_index][0] > self.heap[smallest][0]:  # > 로 수정
         smallest = left_child_index
 
       if right_child_index < len(self.heap) and \
-        self.heap[right_child_index][0] < self.heap[smallest][0]:  # < 로 수정
+        self.heap[right_child_index][0] > self.heap[smallest][0]:  # > 로 수정
         smallest = right_child_index
 
       if smallest != index:
